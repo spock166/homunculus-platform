@@ -1,0 +1,1609 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://SimpleStoneTile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Tiles/GroundFar.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Tiles/GroundNear.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Tiles/sky.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/CameraController.gd" type="Script" id=6]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -32, -96 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+follow_viewport_enable = true
+
+[node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( -32, 512 )
+motion_scale = Vector2( 0.01, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Sky"]
+position = Vector2( 0, -1152 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 40960, 4096 )
+
+[node name="Ground Far" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( -32, 512 )
+motion_scale = Vector2( 0.1, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Ground Far"]
+position = Vector2( 0, -1152 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 40960, 4096 )
+
+[node name="Ground Near" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( -32, 512 )
+motion_scale = Vector2( 0.5, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Ground Near"]
+position = Vector2( 0, -2208 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 40960, 4096 )
+
+[node name="GroundTiles" type="Node" parent="."]
+
+[node name="SimpleStoneTile" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -64, 32 )
+
+[node name="SimpleStoneTile2" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 0, 32 )
+
+[node name="SimpleStoneTile3" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 64, 32 )
+
+[node name="SimpleStoneTile5" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -128, 32 )
+
+[node name="SimpleStoneTile6" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 128, 32 )
+
+[node name="SimpleStoneTile7" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 256, 32 )
+
+[node name="SimpleStoneTile8" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 320, 32 )
+
+[node name="SimpleStoneTile9" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 384, 32 )
+
+[node name="SimpleStoneTile10" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 192, 32 )
+
+[node name="SimpleStoneTile4" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 512, 96 )
+
+[node name="SimpleStoneTile12" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 576, 96 )
+
+[node name="SimpleStoneTile13" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 640, 96 )
+
+[node name="SimpleStoneTile14" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 448, 96 )
+
+[node name="SimpleStoneTile15" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 704, 96 )
+
+[node name="SimpleStoneTile16" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 832, 96 )
+
+[node name="SimpleStoneTile17" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 896, 96 )
+
+[node name="SimpleStoneTile18" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 960, 96 )
+
+[node name="SimpleStoneTile19" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 768, 96 )
+
+[node name="SimpleStoneTile20" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 896, 160 )
+
+[node name="SimpleStoneTile21" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 960, 160 )
+
+[node name="SimpleStoneTile22" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1024, 160 )
+
+[node name="SimpleStoneTile23" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 832, 160 )
+
+[node name="SimpleStoneTile24" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1088, 160 )
+
+[node name="SimpleStoneTile25" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1216, 160 )
+
+[node name="SimpleStoneTile26" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1280, 160 )
+
+[node name="SimpleStoneTile27" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1344, 160 )
+
+[node name="SimpleStoneTile76" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 256, 96 )
+
+[node name="SimpleStoneTile77" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 320, 96 )
+
+[node name="SimpleStoneTile78" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 384, 96 )
+
+[node name="SimpleStoneTile28" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1152, 160 )
+
+[node name="SimpleStoneTile29" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -576, 96 )
+
+[node name="SimpleStoneTile30" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -512, 96 )
+
+[node name="SimpleStoneTile31" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -448, 96 )
+
+[node name="SimpleStoneTile32" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -640, 96 )
+
+[node name="SimpleStoneTile33" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -384, 96 )
+
+[node name="SimpleStoneTile34" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -256, 96 )
+
+[node name="SimpleStoneTile35" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -192, 96 )
+
+[node name="SimpleStoneTile36" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -128, 96 )
+
+[node name="SimpleStoneTile37" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -320, 96 )
+
+[node name="SimpleStoneTile38" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1024, 32 )
+
+[node name="SimpleStoneTile39" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -960, 32 )
+
+[node name="SimpleStoneTile40" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -896, 32 )
+
+[node name="SimpleStoneTile41" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1088, 32 )
+
+[node name="SimpleStoneTile42" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -832, 32 )
+
+[node name="SimpleStoneTile56" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 0, 96 )
+
+[node name="SimpleStoneTile57" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 64, 96 )
+
+[node name="SimpleStoneTile58" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 128, 96 )
+
+[node name="SimpleStoneTile59" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -64, 96 )
+
+[node name="SimpleStoneTile60" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 192, 96 )
+
+[node name="SimpleStoneTile61" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -896, 96 )
+
+[node name="SimpleStoneTile62" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -832, 96 )
+
+[node name="SimpleStoneTile63" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -768, 96 )
+
+[node name="SimpleStoneTile64" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -960, 96 )
+
+[node name="SimpleStoneTile65" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -704, 96 )
+
+[node name="SimpleStoneTile66" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1216, 96 )
+
+[node name="SimpleStoneTile67" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1152, 96 )
+
+[node name="SimpleStoneTile68" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1088, 96 )
+
+[node name="SimpleStoneTile69" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1280, 96 )
+
+[node name="SimpleStoneTile83" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1344, 96 )
+
+[node name="SimpleStoneTile70" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1024, 96 )
+
+[node name="SimpleStoneTile84" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 448, 160 )
+
+[node name="SimpleStoneTile85" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 256, 160 )
+
+[node name="SimpleStoneTile86" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 320, 160 )
+
+[node name="SimpleStoneTile87" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 384, 160 )
+
+[node name="SimpleStoneTile88" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -576, 160 )
+
+[node name="SimpleStoneTile89" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -512, 160 )
+
+[node name="SimpleStoneTile90" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -448, 160 )
+
+[node name="SimpleStoneTile91" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -640, 160 )
+
+[node name="SimpleStoneTile92" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -384, 160 )
+
+[node name="SimpleStoneTile93" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -256, 160 )
+
+[node name="SimpleStoneTile94" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -192, 160 )
+
+[node name="SimpleStoneTile95" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -128, 160 )
+
+[node name="SimpleStoneTile96" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -320, 160 )
+
+[node name="SimpleStoneTile97" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 0, 160 )
+
+[node name="SimpleStoneTile98" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 64, 160 )
+
+[node name="SimpleStoneTile99" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 128, 160 )
+
+[node name="SimpleStoneTile100" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -64, 160 )
+
+[node name="SimpleStoneTile101" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 192, 160 )
+
+[node name="SimpleStoneTile102" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -896, 160 )
+
+[node name="SimpleStoneTile103" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -832, 160 )
+
+[node name="SimpleStoneTile104" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -768, 160 )
+
+[node name="SimpleStoneTile105" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -960, 160 )
+
+[node name="SimpleStoneTile106" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -704, 160 )
+
+[node name="SimpleStoneTile107" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1216, 160 )
+
+[node name="SimpleStoneTile108" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1152, 160 )
+
+[node name="SimpleStoneTile109" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1088, 160 )
+
+[node name="SimpleStoneTile110" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1280, 160 )
+
+[node name="SimpleStoneTile111" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1344, 160 )
+
+[node name="SimpleStoneTile112" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1024, 160 )
+
+[node name="SimpleStoneTile79" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1152, 32 )
+
+[node name="SimpleStoneTile80" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1216, 32 )
+
+[node name="SimpleStoneTile81" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1280, 32 )
+
+[node name="SimpleStoneTile82" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1344, 32 )
+
+[node name="SimpleStoneTile71" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 576, 160 )
+
+[node name="SimpleStoneTile72" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 640, 160 )
+
+[node name="SimpleStoneTile73" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 704, 160 )
+
+[node name="SimpleStoneTile74" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 512, 160 )
+
+[node name="SimpleStoneTile75" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 768, 160 )
+
+[node name="SimpleStoneTile113" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 896, 224 )
+
+[node name="SimpleStoneTile114" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 960, 224 )
+
+[node name="SimpleStoneTile115" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1024, 224 )
+
+[node name="SimpleStoneTile116" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 832, 224 )
+
+[node name="SimpleStoneTile117" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1088, 224 )
+
+[node name="SimpleStoneTile118" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1216, 224 )
+
+[node name="SimpleStoneTile119" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1280, 224 )
+
+[node name="SimpleStoneTile120" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1344, 224 )
+
+[node name="SimpleStoneTile121" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1152, 224 )
+
+[node name="SimpleStoneTile122" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 448, 224 )
+
+[node name="SimpleStoneTile123" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 256, 224 )
+
+[node name="SimpleStoneTile124" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 320, 224 )
+
+[node name="SimpleStoneTile125" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 384, 224 )
+
+[node name="SimpleStoneTile126" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -576, 224 )
+
+[node name="SimpleStoneTile127" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -512, 224 )
+
+[node name="SimpleStoneTile128" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -448, 224 )
+
+[node name="SimpleStoneTile129" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -640, 224 )
+
+[node name="SimpleStoneTile130" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -384, 224 )
+
+[node name="SimpleStoneTile131" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -256, 224 )
+
+[node name="SimpleStoneTile132" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -192, 224 )
+
+[node name="SimpleStoneTile133" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -128, 224 )
+
+[node name="SimpleStoneTile134" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -320, 224 )
+
+[node name="SimpleStoneTile135" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 0, 224 )
+
+[node name="SimpleStoneTile136" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 64, 224 )
+
+[node name="SimpleStoneTile137" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 128, 224 )
+
+[node name="SimpleStoneTile138" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -64, 224 )
+
+[node name="SimpleStoneTile139" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 192, 224 )
+
+[node name="SimpleStoneTile140" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -896, 224 )
+
+[node name="SimpleStoneTile141" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -832, 224 )
+
+[node name="SimpleStoneTile142" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -768, 224 )
+
+[node name="SimpleStoneTile143" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -960, 224 )
+
+[node name="SimpleStoneTile144" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -704, 224 )
+
+[node name="SimpleStoneTile145" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1216, 224 )
+
+[node name="SimpleStoneTile146" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1152, 224 )
+
+[node name="SimpleStoneTile147" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1088, 224 )
+
+[node name="SimpleStoneTile148" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1280, 224 )
+
+[node name="SimpleStoneTile149" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1344, 224 )
+
+[node name="SimpleStoneTile150" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1024, 224 )
+
+[node name="SimpleStoneTile151" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 576, 224 )
+
+[node name="SimpleStoneTile152" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 640, 224 )
+
+[node name="SimpleStoneTile153" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 704, 224 )
+
+[node name="SimpleStoneTile154" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 512, 224 )
+
+[node name="SimpleStoneTile155" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 768, 224 )
+
+[node name="SimpleStoneTile156" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 896, 288 )
+
+[node name="SimpleStoneTile157" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 960, 288 )
+
+[node name="SimpleStoneTile158" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1024, 288 )
+
+[node name="SimpleStoneTile159" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 832, 288 )
+
+[node name="SimpleStoneTile160" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1088, 288 )
+
+[node name="SimpleStoneTile161" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1216, 288 )
+
+[node name="SimpleStoneTile162" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1280, 288 )
+
+[node name="SimpleStoneTile163" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1344, 288 )
+
+[node name="SimpleStoneTile164" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1152, 288 )
+
+[node name="SimpleStoneTile165" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 448, 288 )
+
+[node name="SimpleStoneTile166" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 256, 288 )
+
+[node name="SimpleStoneTile167" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 320, 288 )
+
+[node name="SimpleStoneTile168" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 384, 288 )
+
+[node name="SimpleStoneTile169" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -576, 288 )
+
+[node name="SimpleStoneTile170" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -512, 288 )
+
+[node name="SimpleStoneTile171" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -448, 288 )
+
+[node name="SimpleStoneTile172" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -640, 288 )
+
+[node name="SimpleStoneTile173" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -384, 288 )
+
+[node name="SimpleStoneTile174" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -256, 288 )
+
+[node name="SimpleStoneTile175" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -192, 288 )
+
+[node name="SimpleStoneTile176" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -128, 288 )
+
+[node name="SimpleStoneTile177" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -320, 288 )
+
+[node name="SimpleStoneTile178" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 0, 288 )
+
+[node name="SimpleStoneTile179" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 64, 288 )
+
+[node name="SimpleStoneTile180" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 128, 288 )
+
+[node name="SimpleStoneTile181" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -64, 288 )
+
+[node name="SimpleStoneTile182" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 192, 288 )
+
+[node name="SimpleStoneTile183" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -896, 288 )
+
+[node name="SimpleStoneTile184" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -832, 288 )
+
+[node name="SimpleStoneTile185" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -768, 288 )
+
+[node name="SimpleStoneTile186" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -960, 288 )
+
+[node name="SimpleStoneTile187" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -704, 288 )
+
+[node name="SimpleStoneTile188" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1216, 288 )
+
+[node name="SimpleStoneTile189" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1152, 288 )
+
+[node name="SimpleStoneTile190" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1088, 288 )
+
+[node name="SimpleStoneTile191" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1280, 288 )
+
+[node name="SimpleStoneTile192" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1344, 288 )
+
+[node name="SimpleStoneTile193" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1024, 288 )
+
+[node name="SimpleStoneTile194" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 576, 288 )
+
+[node name="SimpleStoneTile195" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 640, 288 )
+
+[node name="SimpleStoneTile196" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 704, 288 )
+
+[node name="SimpleStoneTile197" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 512, 288 )
+
+[node name="SimpleStoneTile198" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 768, 288 )
+
+[node name="SimpleStoneTile199" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 896, 352 )
+
+[node name="SimpleStoneTile200" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 960, 352 )
+
+[node name="SimpleStoneTile201" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1024, 352 )
+
+[node name="SimpleStoneTile202" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 832, 352 )
+
+[node name="SimpleStoneTile203" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1088, 352 )
+
+[node name="SimpleStoneTile204" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1216, 352 )
+
+[node name="SimpleStoneTile205" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1280, 352 )
+
+[node name="SimpleStoneTile206" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1344, 352 )
+
+[node name="SimpleStoneTile207" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1152, 352 )
+
+[node name="SimpleStoneTile208" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 448, 352 )
+
+[node name="SimpleStoneTile209" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 256, 352 )
+
+[node name="SimpleStoneTile210" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 320, 352 )
+
+[node name="SimpleStoneTile211" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 384, 352 )
+
+[node name="SimpleStoneTile212" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -576, 352 )
+
+[node name="SimpleStoneTile213" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -512, 352 )
+
+[node name="SimpleStoneTile214" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -448, 352 )
+
+[node name="SimpleStoneTile215" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -640, 352 )
+
+[node name="SimpleStoneTile216" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -384, 352 )
+
+[node name="SimpleStoneTile217" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -256, 352 )
+
+[node name="SimpleStoneTile218" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -192, 352 )
+
+[node name="SimpleStoneTile219" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -128, 352 )
+
+[node name="SimpleStoneTile220" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -320, 352 )
+
+[node name="SimpleStoneTile221" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 0, 352 )
+
+[node name="SimpleStoneTile222" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 64, 352 )
+
+[node name="SimpleStoneTile223" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 128, 352 )
+
+[node name="SimpleStoneTile224" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -64, 352 )
+
+[node name="SimpleStoneTile225" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 192, 352 )
+
+[node name="SimpleStoneTile226" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -896, 352 )
+
+[node name="SimpleStoneTile227" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -832, 352 )
+
+[node name="SimpleStoneTile228" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -768, 352 )
+
+[node name="SimpleStoneTile229" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -960, 352 )
+
+[node name="SimpleStoneTile230" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -704, 352 )
+
+[node name="SimpleStoneTile231" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1216, 352 )
+
+[node name="SimpleStoneTile232" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1152, 352 )
+
+[node name="SimpleStoneTile233" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1088, 352 )
+
+[node name="SimpleStoneTile234" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1280, 352 )
+
+[node name="SimpleStoneTile235" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1344, 352 )
+
+[node name="SimpleStoneTile236" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1024, 352 )
+
+[node name="SimpleStoneTile237" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 576, 352 )
+
+[node name="SimpleStoneTile238" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 640, 352 )
+
+[node name="SimpleStoneTile239" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 704, 352 )
+
+[node name="SimpleStoneTile240" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 512, 352 )
+
+[node name="SimpleStoneTile241" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 768, 352 )
+
+[node name="SimpleStoneTile242" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 896, 416 )
+
+[node name="SimpleStoneTile243" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 960, 416 )
+
+[node name="SimpleStoneTile244" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1024, 416 )
+
+[node name="SimpleStoneTile245" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 832, 416 )
+
+[node name="SimpleStoneTile246" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1088, 416 )
+
+[node name="SimpleStoneTile247" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1216, 416 )
+
+[node name="SimpleStoneTile248" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1280, 416 )
+
+[node name="SimpleStoneTile249" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1344, 416 )
+
+[node name="SimpleStoneTile250" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1152, 416 )
+
+[node name="SimpleStoneTile251" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 448, 416 )
+
+[node name="SimpleStoneTile252" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 256, 416 )
+
+[node name="SimpleStoneTile253" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 320, 416 )
+
+[node name="SimpleStoneTile254" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 384, 416 )
+
+[node name="SimpleStoneTile255" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -576, 416 )
+
+[node name="SimpleStoneTile256" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -512, 416 )
+
+[node name="SimpleStoneTile257" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -448, 416 )
+
+[node name="SimpleStoneTile258" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -640, 416 )
+
+[node name="SimpleStoneTile259" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -384, 416 )
+
+[node name="SimpleStoneTile260" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -256, 416 )
+
+[node name="SimpleStoneTile261" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -192, 416 )
+
+[node name="SimpleStoneTile262" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -128, 416 )
+
+[node name="SimpleStoneTile263" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -320, 416 )
+
+[node name="SimpleStoneTile264" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 0, 416 )
+
+[node name="SimpleStoneTile265" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 64, 416 )
+
+[node name="SimpleStoneTile266" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 128, 416 )
+
+[node name="SimpleStoneTile267" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -64, 416 )
+
+[node name="SimpleStoneTile268" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 192, 416 )
+
+[node name="SimpleStoneTile269" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -896, 416 )
+
+[node name="SimpleStoneTile270" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -832, 416 )
+
+[node name="SimpleStoneTile271" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -768, 416 )
+
+[node name="SimpleStoneTile272" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -960, 416 )
+
+[node name="SimpleStoneTile273" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -704, 416 )
+
+[node name="SimpleStoneTile274" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1216, 416 )
+
+[node name="SimpleStoneTile275" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1152, 416 )
+
+[node name="SimpleStoneTile276" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1088, 416 )
+
+[node name="SimpleStoneTile277" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1280, 416 )
+
+[node name="SimpleStoneTile278" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1344, 416 )
+
+[node name="SimpleStoneTile279" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1024, 416 )
+
+[node name="SimpleStoneTile280" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 576, 416 )
+
+[node name="SimpleStoneTile281" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 640, 416 )
+
+[node name="SimpleStoneTile282" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 704, 416 )
+
+[node name="SimpleStoneTile283" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 512, 416 )
+
+[node name="SimpleStoneTile284" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 768, 416 )
+
+[node name="SimpleStoneTile285" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 896, 480 )
+
+[node name="SimpleStoneTile286" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 960, 480 )
+
+[node name="SimpleStoneTile287" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1024, 480 )
+
+[node name="SimpleStoneTile288" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 832, 480 )
+
+[node name="SimpleStoneTile289" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1088, 480 )
+
+[node name="SimpleStoneTile290" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1216, 480 )
+
+[node name="SimpleStoneTile291" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1280, 480 )
+
+[node name="SimpleStoneTile292" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1344, 480 )
+
+[node name="SimpleStoneTile293" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1152, 480 )
+
+[node name="SimpleStoneTile294" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 448, 480 )
+
+[node name="SimpleStoneTile295" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 256, 480 )
+
+[node name="SimpleStoneTile296" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 320, 480 )
+
+[node name="SimpleStoneTile297" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 384, 480 )
+
+[node name="SimpleStoneTile298" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -576, 480 )
+
+[node name="SimpleStoneTile299" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -512, 480 )
+
+[node name="SimpleStoneTile300" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -448, 480 )
+
+[node name="SimpleStoneTile301" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -640, 480 )
+
+[node name="SimpleStoneTile302" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -384, 480 )
+
+[node name="SimpleStoneTile303" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -256, 480 )
+
+[node name="SimpleStoneTile304" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -192, 480 )
+
+[node name="SimpleStoneTile305" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -128, 480 )
+
+[node name="SimpleStoneTile306" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -320, 480 )
+
+[node name="SimpleStoneTile307" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 0, 480 )
+
+[node name="SimpleStoneTile308" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 64, 480 )
+
+[node name="SimpleStoneTile309" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 128, 480 )
+
+[node name="SimpleStoneTile310" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -64, 480 )
+
+[node name="SimpleStoneTile311" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 192, 480 )
+
+[node name="SimpleStoneTile312" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -896, 480 )
+
+[node name="SimpleStoneTile313" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -832, 480 )
+
+[node name="SimpleStoneTile314" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -768, 480 )
+
+[node name="SimpleStoneTile315" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -960, 480 )
+
+[node name="SimpleStoneTile316" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -704, 480 )
+
+[node name="SimpleStoneTile317" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1216, 480 )
+
+[node name="SimpleStoneTile318" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1152, 480 )
+
+[node name="SimpleStoneTile319" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1088, 480 )
+
+[node name="SimpleStoneTile320" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1280, 480 )
+
+[node name="SimpleStoneTile321" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1344, 480 )
+
+[node name="SimpleStoneTile322" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1024, 480 )
+
+[node name="SimpleStoneTile323" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 576, 480 )
+
+[node name="SimpleStoneTile324" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 640, 480 )
+
+[node name="SimpleStoneTile325" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 704, 480 )
+
+[node name="SimpleStoneTile326" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 512, 480 )
+
+[node name="SimpleStoneTile327" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 768, 480 )
+
+[node name="SimpleStoneTile328" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2432, 288 )
+
+[node name="SimpleStoneTile329" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2496, 288 )
+
+[node name="SimpleStoneTile330" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2560, 288 )
+
+[node name="SimpleStoneTile331" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2368, 288 )
+
+[node name="SimpleStoneTile332" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2624, 288 )
+
+[node name="SimpleStoneTile333" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2752, 288 )
+
+[node name="SimpleStoneTile334" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2816, 288 )
+
+[node name="SimpleStoneTile335" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2880, 288 )
+
+[node name="SimpleStoneTile336" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2688, 288 )
+
+[node name="SimpleStoneTile337" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1984, 288 )
+
+[node name="SimpleStoneTile338" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1792, 288 )
+
+[node name="SimpleStoneTile339" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1856, 288 )
+
+[node name="SimpleStoneTile340" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1920, 288 )
+
+[node name="SimpleStoneTile341" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1408, 288 )
+
+[node name="SimpleStoneTile342" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1536, 288 )
+
+[node name="SimpleStoneTile343" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1600, 288 )
+
+[node name="SimpleStoneTile344" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1664, 288 )
+
+[node name="SimpleStoneTile345" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1472, 288 )
+
+[node name="SimpleStoneTile346" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1728, 288 )
+
+[node name="SimpleStoneTile347" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2112, 288 )
+
+[node name="SimpleStoneTile348" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2176, 288 )
+
+[node name="SimpleStoneTile349" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2240, 288 )
+
+[node name="SimpleStoneTile350" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2048, 288 )
+
+[node name="SimpleStoneTile351" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2304, 288 )
+
+[node name="SimpleStoneTile352" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2432, 352 )
+
+[node name="SimpleStoneTile353" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2496, 352 )
+
+[node name="SimpleStoneTile354" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2560, 352 )
+
+[node name="SimpleStoneTile355" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2368, 352 )
+
+[node name="SimpleStoneTile356" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2624, 352 )
+
+[node name="SimpleStoneTile357" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2752, 352 )
+
+[node name="SimpleStoneTile358" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2816, 352 )
+
+[node name="SimpleStoneTile359" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2880, 352 )
+
+[node name="SimpleStoneTile360" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2688, 352 )
+
+[node name="SimpleStoneTile361" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1984, 352 )
+
+[node name="SimpleStoneTile362" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1792, 352 )
+
+[node name="SimpleStoneTile363" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1856, 352 )
+
+[node name="SimpleStoneTile364" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1920, 352 )
+
+[node name="SimpleStoneTile365" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1408, 352 )
+
+[node name="SimpleStoneTile366" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1536, 352 )
+
+[node name="SimpleStoneTile367" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1600, 352 )
+
+[node name="SimpleStoneTile368" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1664, 352 )
+
+[node name="SimpleStoneTile369" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1472, 352 )
+
+[node name="SimpleStoneTile370" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1728, 352 )
+
+[node name="SimpleStoneTile371" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2112, 352 )
+
+[node name="SimpleStoneTile372" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2176, 352 )
+
+[node name="SimpleStoneTile373" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2240, 352 )
+
+[node name="SimpleStoneTile374" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2048, 352 )
+
+[node name="SimpleStoneTile375" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2304, 352 )
+
+[node name="SimpleStoneTile376" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2432, 416 )
+
+[node name="SimpleStoneTile377" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2496, 416 )
+
+[node name="SimpleStoneTile378" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2560, 416 )
+
+[node name="SimpleStoneTile379" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2368, 416 )
+
+[node name="SimpleStoneTile380" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2624, 416 )
+
+[node name="SimpleStoneTile381" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2752, 416 )
+
+[node name="SimpleStoneTile382" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2816, 416 )
+
+[node name="SimpleStoneTile383" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2880, 416 )
+
+[node name="SimpleStoneTile384" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2688, 416 )
+
+[node name="SimpleStoneTile385" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1984, 416 )
+
+[node name="SimpleStoneTile386" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1792, 416 )
+
+[node name="SimpleStoneTile387" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1856, 416 )
+
+[node name="SimpleStoneTile388" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1920, 416 )
+
+[node name="SimpleStoneTile389" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1408, 416 )
+
+[node name="SimpleStoneTile390" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1536, 416 )
+
+[node name="SimpleStoneTile391" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1600, 416 )
+
+[node name="SimpleStoneTile392" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1664, 416 )
+
+[node name="SimpleStoneTile393" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1472, 416 )
+
+[node name="SimpleStoneTile394" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1728, 416 )
+
+[node name="SimpleStoneTile395" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2112, 416 )
+
+[node name="SimpleStoneTile396" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2176, 416 )
+
+[node name="SimpleStoneTile397" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2240, 416 )
+
+[node name="SimpleStoneTile398" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2048, 416 )
+
+[node name="SimpleStoneTile399" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2304, 416 )
+
+[node name="SimpleStoneTile400" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2432, 480 )
+
+[node name="SimpleStoneTile401" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2496, 480 )
+
+[node name="SimpleStoneTile402" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2560, 480 )
+
+[node name="SimpleStoneTile403" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2368, 480 )
+
+[node name="SimpleStoneTile404" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2624, 480 )
+
+[node name="SimpleStoneTile405" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2752, 480 )
+
+[node name="SimpleStoneTile406" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2816, 480 )
+
+[node name="SimpleStoneTile407" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2880, 480 )
+
+[node name="SimpleStoneTile408" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2688, 480 )
+
+[node name="SimpleStoneTile409" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1984, 480 )
+
+[node name="SimpleStoneTile410" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1792, 480 )
+
+[node name="SimpleStoneTile411" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1856, 480 )
+
+[node name="SimpleStoneTile412" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1920, 480 )
+
+[node name="SimpleStoneTile413" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1408, 480 )
+
+[node name="SimpleStoneTile414" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1536, 480 )
+
+[node name="SimpleStoneTile415" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1600, 480 )
+
+[node name="SimpleStoneTile416" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1664, 480 )
+
+[node name="SimpleStoneTile417" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1472, 480 )
+
+[node name="SimpleStoneTile418" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 1728, 480 )
+
+[node name="SimpleStoneTile419" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2112, 480 )
+
+[node name="SimpleStoneTile420" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2176, 480 )
+
+[node name="SimpleStoneTile421" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2240, 480 )
+
+[node name="SimpleStoneTile422" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2048, 480 )
+
+[node name="SimpleStoneTile423" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2304, 480 )
+
+[node name="SimpleStoneTile424" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3968, 288 )
+
+[node name="SimpleStoneTile425" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4032, 288 )
+
+[node name="SimpleStoneTile426" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4096, 288 )
+
+[node name="SimpleStoneTile427" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3904, 288 )
+
+[node name="SimpleStoneTile428" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4160, 288 )
+
+[node name="SimpleStoneTile429" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4288, 288 )
+
+[node name="SimpleStoneTile430" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4352, 288 )
+
+[node name="SimpleStoneTile431" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4416, 288 )
+
+[node name="SimpleStoneTile432" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4224, 288 )
+
+[node name="SimpleStoneTile433" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3520, 288 )
+
+[node name="SimpleStoneTile434" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3328, 288 )
+
+[node name="SimpleStoneTile435" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3392, 288 )
+
+[node name="SimpleStoneTile436" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3456, 288 )
+
+[node name="SimpleStoneTile437" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2944, 288 )
+
+[node name="SimpleStoneTile438" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3072, 288 )
+
+[node name="SimpleStoneTile439" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3136, 288 )
+
+[node name="SimpleStoneTile440" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3200, 288 )
+
+[node name="SimpleStoneTile441" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3008, 288 )
+
+[node name="SimpleStoneTile442" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3264, 288 )
+
+[node name="SimpleStoneTile443" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3648, 288 )
+
+[node name="SimpleStoneTile444" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3712, 288 )
+
+[node name="SimpleStoneTile445" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3776, 288 )
+
+[node name="SimpleStoneTile446" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3584, 288 )
+
+[node name="SimpleStoneTile447" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3840, 288 )
+
+[node name="SimpleStoneTile448" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3968, 352 )
+
+[node name="SimpleStoneTile449" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4032, 352 )
+
+[node name="SimpleStoneTile450" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4096, 352 )
+
+[node name="SimpleStoneTile451" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3904, 352 )
+
+[node name="SimpleStoneTile452" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4160, 352 )
+
+[node name="SimpleStoneTile453" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4288, 352 )
+
+[node name="SimpleStoneTile454" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4352, 352 )
+
+[node name="SimpleStoneTile455" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4416, 352 )
+
+[node name="SimpleStoneTile456" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4224, 352 )
+
+[node name="SimpleStoneTile457" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3520, 352 )
+
+[node name="SimpleStoneTile458" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3328, 352 )
+
+[node name="SimpleStoneTile459" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3392, 352 )
+
+[node name="SimpleStoneTile460" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3456, 352 )
+
+[node name="SimpleStoneTile461" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2944, 352 )
+
+[node name="SimpleStoneTile462" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3072, 352 )
+
+[node name="SimpleStoneTile463" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3136, 352 )
+
+[node name="SimpleStoneTile464" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3200, 352 )
+
+[node name="SimpleStoneTile465" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3008, 352 )
+
+[node name="SimpleStoneTile466" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3264, 352 )
+
+[node name="SimpleStoneTile467" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3648, 352 )
+
+[node name="SimpleStoneTile468" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3712, 352 )
+
+[node name="SimpleStoneTile469" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3776, 352 )
+
+[node name="SimpleStoneTile470" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3584, 352 )
+
+[node name="SimpleStoneTile471" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3840, 352 )
+
+[node name="SimpleStoneTile472" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3968, 416 )
+
+[node name="SimpleStoneTile473" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4032, 416 )
+
+[node name="SimpleStoneTile474" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4096, 416 )
+
+[node name="SimpleStoneTile475" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3904, 416 )
+
+[node name="SimpleStoneTile476" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4160, 416 )
+
+[node name="SimpleStoneTile477" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4288, 416 )
+
+[node name="SimpleStoneTile478" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4352, 416 )
+
+[node name="SimpleStoneTile479" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4416, 416 )
+
+[node name="SimpleStoneTile480" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4224, 416 )
+
+[node name="SimpleStoneTile481" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3520, 416 )
+
+[node name="SimpleStoneTile482" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3328, 416 )
+
+[node name="SimpleStoneTile483" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3392, 416 )
+
+[node name="SimpleStoneTile484" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3456, 416 )
+
+[node name="SimpleStoneTile485" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2944, 416 )
+
+[node name="SimpleStoneTile486" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3072, 416 )
+
+[node name="SimpleStoneTile487" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3136, 416 )
+
+[node name="SimpleStoneTile488" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3200, 416 )
+
+[node name="SimpleStoneTile489" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3008, 416 )
+
+[node name="SimpleStoneTile490" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3264, 416 )
+
+[node name="SimpleStoneTile491" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3648, 416 )
+
+[node name="SimpleStoneTile492" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3712, 416 )
+
+[node name="SimpleStoneTile493" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3776, 416 )
+
+[node name="SimpleStoneTile494" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3584, 416 )
+
+[node name="SimpleStoneTile495" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3840, 416 )
+
+[node name="SimpleStoneTile496" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3968, 480 )
+
+[node name="SimpleStoneTile497" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4032, 480 )
+
+[node name="SimpleStoneTile498" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4096, 480 )
+
+[node name="SimpleStoneTile499" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3904, 480 )
+
+[node name="SimpleStoneTile500" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4160, 480 )
+
+[node name="SimpleStoneTile501" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4288, 480 )
+
+[node name="SimpleStoneTile502" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4352, 480 )
+
+[node name="SimpleStoneTile503" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4416, 480 )
+
+[node name="SimpleStoneTile504" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 4224, 480 )
+
+[node name="SimpleStoneTile505" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3520, 480 )
+
+[node name="SimpleStoneTile506" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3328, 480 )
+
+[node name="SimpleStoneTile507" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3392, 480 )
+
+[node name="SimpleStoneTile508" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3456, 480 )
+
+[node name="SimpleStoneTile509" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 2944, 480 )
+
+[node name="SimpleStoneTile510" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3072, 480 )
+
+[node name="SimpleStoneTile511" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3136, 480 )
+
+[node name="SimpleStoneTile512" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3200, 480 )
+
+[node name="SimpleStoneTile513" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3008, 480 )
+
+[node name="SimpleStoneTile514" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3264, 480 )
+
+[node name="SimpleStoneTile515" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3648, 480 )
+
+[node name="SimpleStoneTile516" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3712, 480 )
+
+[node name="SimpleStoneTile517" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3776, 480 )
+
+[node name="SimpleStoneTile518" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3584, 480 )
+
+[node name="SimpleStoneTile519" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 3840, 480 )
+
+[node name="SimpleStoneTile43" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -704, 32 )
+
+[node name="SimpleStoneTile44" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -640, 32 )
+
+[node name="SimpleStoneTile45" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -576, 32 )
+
+[node name="SimpleStoneTile46" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -768, 32 )
+
+[node name="SimpleStoneTile47" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1280, -32 )
+
+[node name="SimpleStoneTile48" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1216, -32 )
+
+[node name="SimpleStoneTile49" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1152, -32 )
+
+[node name="SimpleStoneTile50" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1344, -32 )
+
+[node name="SimpleStoneTile51" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1088, -32 )
+
+[node name="SimpleStoneTile52" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -960, -32 )
+
+[node name="SimpleStoneTile53" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -896, -32 )
+
+[node name="SimpleStoneTile54" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -832, -32 )
+
+[node name="SimpleStoneTile55" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( -1024, -32 )
+
+[node name="SimpleStoneTile11" parent="GroundTiles" instance=ExtResource( 2 )]
+position = Vector2( 448, 32 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+script = ExtResource( 6 )
